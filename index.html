@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="font-awesome.min.css">
+
+  <style>
+    body{
+      margin: 50px 0;
+    }
+    input{
+      margin-top: 10px;
+    }
+    li{
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>To Do List App (+ localStorage)</h1>
+
+    <form>
+      <input type="text" class="form-control"
+        placeholder="type something and press enter...">
+    </form>
+
+    <hr>
+
+    <ul>
+      <!-- qui gli elementi renderizzati -->
+    </ul>
+
+  </div>
+
+
+  <!-- Template elemento -->
+  <template>
+
+  <li>
+    {{item}}
+    <button
+      data-index="{{index}}"
+      class="btn btn-danger btn-sm"
+      onclick="removeItem(event)">
+        <span class="fa fa-trash-o"></span>
+    </button>
+  </li>
+
+  </template>
+
+  <!-- App script -->
+  <script src="todo.js"></script>
+</body>
+</html>
